@@ -37,6 +37,11 @@ public class JaarTest {
 	public void equalsOpTweeVerschillendeJarenMoetFalseZijn() {
 		assertNotEquals(new Jaar(2015), new Jaar(2016));
 	}
+	
+	@Test
+	public void equalsOpEenJaarEnIetsAndersMoetFalseZijn() {
+		assertFalse(new Jaar(2016).equals(new Object()));
+	}
 
 	@Test
 	public void hashCodeOpTweeDezelfdeJarenMoetGelijkZijn() {
